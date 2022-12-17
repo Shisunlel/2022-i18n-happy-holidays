@@ -16,7 +16,7 @@ Translations are provided, though you can add your own!
 
 ## Task List + Hints
 
-- [ ] Localize "Happy Holidays" using Vue i18n.
+- [x] Localize "Happy Holidays" using Vue i18n.
 - [ ] Setup a cycle, radio button, or other way of changing what the current locale is.
 - [ ] Render the current locale.
 - [ ] Render a flag emoji or icon for each locale.
