@@ -9,13 +9,14 @@ import presetWind from '@unocss/preset-wind'
 import { presetWebFonts } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
 
-console.log(
-  'includes',
-  resolve(dirname(fileURLToPath(import.meta.url)), './locales/**')
-)
+// console.log(
+//   'includes',
+//   resolve(dirname(fileURLToPath(import.meta.url)), './locales/**')
+// )
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/2022-i18n-happy-holidays/',
   plugins: [
     vue({
       reactivityTransform: true,

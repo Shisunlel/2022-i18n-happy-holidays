@@ -3,12 +3,15 @@
     <section class="flex flex-col items-center leading-loose text-center gap-4">
       <div class="text-3xl">
         <span class="i-twemoji-christmas-tree"></span>
-        {{ $t('happyHolidays') }}
+        {{ t('happyHolidays') }}
         <span class="i-twemoji-world-map"></span>
       </div>
       <!-- Dates - Check out locales/en.json for the key -->
       <div class="text-3xl">
-        <i18n-t keypath="christmasIsComing" :plural="day">
+        <template v-if="day <= 0">
+          {{ t('chirstmasIsOver') }}
+        </template>
+        <i18n-t v-else keypath="christmasIsComing" :plural="day">
           <template #date>
             {{ d(christmasDate, 'long') }}
           </template>
